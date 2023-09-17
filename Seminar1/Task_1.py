@@ -11,14 +11,9 @@ class Triangle:
     Class for determining triangle, using lengths of it sides.
     """
 
-    # attributes (properties):
-    length_a = 5
-    length_b = 5
-    length_c = 5
-
     # methods (functions)
 
-    def __init__(self, len_a, len_b, len_c):
+    def __init__(self, len_a=5, len_b=5, len_c=5):
         """
         Init magic method.
         :param len_a:

@@ -19,7 +19,7 @@ def game_start(computer_number: int):
     print("Игра: 'Угадай число'.\n Компьютер загадал число от 0 до 1000. У вас есть 10 попыток, чтобы угадать"
           " загаданное число. Удачи ^_^")
 
-    attempts = 9
+    attempts = 3
     while True:
         user_number = user_dialog()
         if attempts == 0:
@@ -38,6 +38,7 @@ def game_start(computer_number: int):
             print("Неверно. Загаданное число больше.")
             print(f"У вас осталось {attempts} попыток(-ки)")
             attempts -= 1
+
 
 
 def user_dialog() -> int:
