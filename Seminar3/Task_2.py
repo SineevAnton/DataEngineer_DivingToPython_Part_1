@@ -33,9 +33,9 @@ Modern deep learning techniques for NLP include word embedding (how often one wo
 """.lower()
 
 # Избавляемся от символов пунктуации и цифр
-puncuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~0123456789'''
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~0123456789'''
 for element in text:
-    if element in puncuations:
+    if element in punctuations:
         text = text.replace(element, "")
 
 # Разбили текст по пробелам в список, посчитали вхождения каждого слова, вывели 10 наиболее частых с

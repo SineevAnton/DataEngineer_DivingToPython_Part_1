@@ -3,16 +3,8 @@
 # Достаточно вернуть один допустимый вариант.
 # *Верните все возможные варианты комплектации рюкзака.
 
-things_to_hike = {
-    "бутыль воды": 1,
-    "веревка": 0.5,
-    "палатка": 3,
-    "котелок": 4,
-    "консерва": 1.5,
-}
 
-
-def pack_a_backpack(backpack_limit, things, lastindex=0, lst=[]):
+def pack_a_backpack(backpack_limit, things, lastindex=0, lst=None):
     """
     Функция, рекурсивно подсчитывающая возможную комплектацию рюкзака
     в зависимости от его грузоподъемности и весов переносимых предметов
@@ -22,6 +14,8 @@ def pack_a_backpack(backpack_limit, things, lastindex=0, lst=[]):
     :param lst: список, в который запишутся веса переносимых предметов, для дальнейшего формирования вывода
     :return: nothing
     """
+    if lst is None:
+        lst = []
     weights = list(things.values())
     if backpack_limit == 0:
         for thing, weight in things.items():
@@ -34,4 +28,18 @@ def pack_a_backpack(backpack_limit, things, lastindex=0, lst=[]):
                 pack_a_backpack(backpack_limit - weights[i], things, i, lst + [weights[i]])
 
 
-pack_a_backpack(6, things_to_hike)
+if __name__ == '__main__':
+    things_to_hike = {
+        "бутыль воды": 1,
+        "веревка": 0.5,
+        "палатка": 3,
+        "котелок": 4,
+        "консерва": 1.5,
+    }
+
+    pack_a_backpack(6, things_to_hike)
+
+
+
+
+
