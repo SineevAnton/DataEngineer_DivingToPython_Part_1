@@ -21,3 +21,4 @@ def get_path_element(file_path: str) -> tuple:
 
 file_path = 'C:\\Program Files (x86)\\JetBrains\\IntelliJ IDEA Community Edition 2016.2.3\\bin\\idea64.exe'
 print(get_path_element(file_path))
+print(type(get_path_element(file_path)))
